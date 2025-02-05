@@ -1,25 +1,21 @@
-import React from 'react'
-import {BrowserRouter as Router} from 'react-router-dom';
-import Login from '../../pages/Login';
-import Register from '../../pages/Register';
-import Home from '../../pages/Home';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from '../../pages/Login/index';
+import Register from '../../pages/Register/index';
+import Home from '../../pages/Home/index';
 
 const Routes = () => {
   return (
     <Router>
         <Switch>
-            <Route path="/login">
-                <Login />
-            </Route>
-            <Route path="register">
-                <Register />
-            </Route>
-            <Route path="/">
-                <Hom />
-            </Route>
-        </Switch>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+      </Switch>
     </Router>
-  )
-}
+  );
+};
 
-export default Routes
+export default Routes;
