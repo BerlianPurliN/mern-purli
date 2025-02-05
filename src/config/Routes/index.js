@@ -9,13 +9,13 @@ const Routes = () => {
     <Router>
         <Switch>
             <Route path="/login">
-                <Login/>
+                <Login />
             </Route>
             <Route path="register">
-                <Register/>
+                <Register />
             </Route>
             <Route path="/">
-                <Home/>
+                <Hom />
             </Route>
         </Switch>
     </Router>
